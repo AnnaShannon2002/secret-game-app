@@ -47,15 +47,25 @@
   </div>
 </nav>
 
-<main>
+<main class="m-2 p-2 seeMe">
   <h1 class="text-center" id="h1"><b>My Favorite Video Games</b></h1>
   <h2>My top 5 favorite games overall</h2>
-  <ul id="gameList">
+  <div class="mb-3">
+
+    <button id="btnLoadGames" class="btn btn-outline-primary">load games</button>
+
+    <button id="btnClearGames" class="btn btn-outline-primary">clear games</button>
+    
+    
+  </div>
+
+  <ul id="gameList" class="list-group">
     <li>Call of Duty: Modern Warfare</li>
     <li>Batman: Arkham Knight</li>
     <li>Red Dead Redemption 2</li>
     <li>Minecraft</li>
     <li>Runescape</li>
+    <li class="list-group-item">Viva Pinata</li>
   </ul>
 
 </main>
@@ -75,7 +85,9 @@
 <!-- all my script libraries -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script>
+<!-- <script src="./script.js"></script> -->
+<script src="scripts/script.js"></script>
 
 </body>
 </html>

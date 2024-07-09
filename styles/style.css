@@ -15,6 +15,12 @@ li {
   font-style: normal;
 }
 
+/*
+.seeMe {
+  border: dashed 4px black;
+}
+*/
+
 /* use # to prefix css selector for dom/html element id attribute */
 #gameList {
   background-color: #42A5F5;
