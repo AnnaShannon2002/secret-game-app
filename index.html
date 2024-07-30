@@ -53,26 +53,25 @@
 </nav>
 
 <main class="m-2 p-2 seeMe">
-  <h1 class="text-center" id="h1"><b>My Favorite Video Games</b></h1>
-  <h2>My top favorite games overall</h2>
-  <div class="mb-3">
-
-    <button id="btnAddGame" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#addGameModal">add game</button>
-
-    <button id="btnShowAll" class="btn btn-outline-primary">show all</button>
-    <button id="btnHideAll" class="btn btn-outline-primary">hide all</button>
-
-    <button id="btnConsoleData" class="btn btn-outline-primary">write data object in console</button>
-    
-    
-  </div>
-
+  <h1 class="text-center" id="h1"><b>Library of Video Games</b></h1>
   <div>
-    <h2 class="text-center" id="h2">~ Information ~</h2>
+    <h2 class="text-center" id="h2"><br>~ Information ~</h2>
     <p class="text-center" id="white">
       Thanks for visitng my game app. I hope you enjoy the games I have listed. 
       I have a lot of fun playing these games and I hope you do too.
     </p>
+  </div>
+  <h2>My top favorite games overall</h2>
+  <div class="mb-3">
+
+    <button id="btnAddGame" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#addGameModal">Add Game</button>
+
+    <button id="btnShowAll" class="btn btn-outline-primary">Show All</button>
+    <button id="btnHideAll" class="btn btn-outline-primary">Hide All</button>
+
+    <button id="btnConsoleData" class="btn btn-outline-primary">Write Data Object in Console</button>
+    
+    
   </div>
 
    <!-- Modal -->
@@ -87,35 +86,35 @@
           <ul class="list-group">
 
             <li class="input-group w-100">
-              <span class="w-20 input-group-text">game name</span>
+              <span class="w-20 input-group-text">Game Name</span>
               <input id="gameAddName" type="text" class="form-control" placeholder="game name">
             </li>
 
             <li class="input-group w-100">
-              <span class="w-20 input-group-text">developer</span>
+              <span class="w-20 input-group-text">Developer</span>
               <input id="gameAddDeveloper" type="text" class="form-control" placeholder="developer">
             </li>
 
             <li class="input-group w-100">
-              <span class="w-20 input-group-text">singleplayer</span>
-              <input id="gameAddSingleplayer" type="text" class="form-control" placeholder="singleplayer">
+              <span class="w-20 input-group-text">Singleplayer</span>
+              <input id="gameAddSingleplayer" type="text" class="form-control" placeholder="yes or no">
             </li>
 
             <li class="input-group w-100">
-              <span class="w-20 input-group-text">multiplayer</span>
-              <input id="gameAddMultiplayer" type="text" class="form-control" placeholder="multiplayer">
+              <span class="w-20 input-group-text">Multiplayer</span>
+              <input id="gameAddMultiplayer" type="text" class="form-control" placeholder="yes or no">
             </li>
 
             <li class="input-group w-100">
-              <span class="w-20 input-group-text">tags</span>
-              <input id="gameAddTags" type="text" class="form-control" placeholder="tags">
+              <span class="w-20 input-group-text">Tags/Genre</span>
+              <input id="gameAddTags" type="text" class="form-control" placeholder="ex: creative,sandbox,adventure">
             </li>
 
           </ul>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button id="btnSaveSong" type="button" class="btn btn-primary">Save Song</button>
+          <button id="btnSaveSong" type="button" class="btn btn-primary">Save Game</button>
         </div>
       </div>
     </div>
