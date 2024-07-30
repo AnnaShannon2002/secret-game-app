@@ -1,35 +1,11 @@
 // A $( document ).ready() block.
 $( document ).ready(function() {
 
-    // console.log("the doc is ready!");
 
     loadGameData("gameList");
 
     addEvents();
     
-  // $('#btnLoadGames').on('click', function() {
-
-  //   $('#gameList').empty();
-
-    
-  //   console.log("clicked load games")
-  //   console.log('more lines of code');
-
-  //   console.log(gameList);
-
-  //   $(gameList).each(function(index, value) {
-
-  //     $('#gameList').append(`<li class="list-group-item"> ${value} </li>`)
-
-  //   });
-  
-  // });
-
-  // $('#btnClearGames').on('click', function() {
-
-  //   $('#gameList').slideToggle(1000).empty();
-
-  // });
 });
 
 function loadGameData(appendId) {
@@ -122,7 +98,7 @@ function addEvents(){
     let $this = $(e.target);
     let $thisId = $this.attr('id');
     let $thisKey = $this.attr('name');
-     console.log($this.key);
+     console.log($thisKey);
 
     let regexDigit = /\d+/g;
     let gameIndex = $thisId.match(regexDigit)[0];
@@ -136,5 +112,5 @@ function addEvents(){
 
   $('#btnConsoleData').on('click', ()=> {
     console.log(data.games); 
-  });
+  })
 }
