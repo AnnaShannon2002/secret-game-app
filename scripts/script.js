@@ -38,7 +38,7 @@ function loadGameData(appendId) {
 
   appendElement.empty();
 
-  $.each(data.games, (index, song)=>{
+  $.each(data.games, (index, game)=>{
     appendElement.append(`
       <li id="gameNo${index}Name" class="list-group-item mb-1 gameName">
       ${game.name}
@@ -46,19 +46,19 @@ function loadGameData(appendId) {
       <ul class"list-group gameDetails">
         <li class="input-group w-100">
           <span class="w-20 input-group-text">developer</span>
-            <input id="gameNo${index}DeveloperEdit" name="developer type="text" class="form-control editGame" value="${song.developer}">
+            <input id="gameNo${index}DeveloperEdit" name="developer" type="text" class="form-control editGame" value="${game.developer}">
         </li>
         <li class="input-group w-100">
           <span class="w-20 input-group-text">singleplayer</span>
-            <input id="gameNo${index}SingleplayerEdit" name="singleplayer type="text" class="form-control editGame" value="${song.singleplayer}">
+            <input id="gameNo${index}SingleplayerEdit" name="singleplayer" type="text" class="form-control editGame" value="${game.singleplayer}">
         </li>
         <li class="input-group w-100">
           <span class="w-20 input-group-text">multiplayer</span>
-            <input id="gameNo${index}MultiplayerEdit" name="multiplayer type="text" class="form-control editGame" value="${song.multiplayer}">
+            <input id="gameNo${index}MultiplayerEdit" name="multiplayer" type="text" class="form-control editGame" value="${game.multiplayer}">
         </li>
         <li class="input-group w-100">
           <span class="w-20 input-group-text">tags</span>
-            <input id="gameNo${index}TagsEdit" name="tags type="text" class="form-control editGame" value="${song.tags}">
+            <input id="gameNo${index}TagsEdit" name="tags" type="text" class="form-control editGame" value="${game.tags}">
         </li>
       </ul>
     </li>`);
@@ -72,10 +72,14 @@ function loadGameData(appendId) {
 
 function addEvents(){
   $('.gameName').on('click', (e)=> {
+
     let $this = $(e.target);
     let $thisId = $this.attr('id');
 
     $('#'+ $thisId +' > ul.gameDetails').toggle();
+
+    $('#'+ $thisId +' > i.editGame').toggle();
+
   });
 
   $('#btnHideAll').on('click', (e)=> {
@@ -83,7 +87,9 @@ function addEvents(){
   });
   
   $('#btnShowAll').on('click', (e)=> {
-    $('ul.gameDetails').show();
+
+  $('ul.gameDetails').show();
+
   });
 
   $('input.editGame').on('click', (e)=> {
@@ -91,9 +97,9 @@ function addEvents(){
     let $this = $(e.target);
     $this.prop('readonly', false);
 
-  });
+  })
 
-  $('#btnSaveSong').on('click', ()=> {
+  $('#btnSaveGame').on('click', ()=> {
 
     data.games.push({
       name : $('#gameAddName').val(),
@@ -108,9 +114,10 @@ function addEvents(){
 
     $('#addGameModal .btn-close').click()
     $('#addGameModal input').val('');
+
   });
 
-  $('input.editSong').on('blur', (e)=> {
+  $('input.editGame').on('blur', (e)=> {
 
     let $this = $(e.target);
     let $thisId = $this.attr('id');
