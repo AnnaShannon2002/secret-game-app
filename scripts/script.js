@@ -1,35 +1,35 @@
 // A $( document ).ready() block.
 $( document ).ready(function() {
 
-    console.log("the doc is ready!");
+    // console.log("the doc is ready!");
 
     loadGameData("gameList");
 
     addEvents();
     
-  $('#btnLoadGames').on('click', function() {
+  // $('#btnLoadGames').on('click', function() {
 
-    $('#gameList').empty();
+  //   $('#gameList').empty();
 
     
-    console.log("clicked load games")
-    console.log('more lines of code');
+  //   console.log("clicked load games")
+  //   console.log('more lines of code');
 
-    console.log(gameList);
+  //   console.log(gameList);
 
-    $(gameList).each(function(index, value) {
+  //   $(gameList).each(function(index, value) {
 
-      $('#gameList').append(`<li class="list-group-item"> ${value} </li>`)
+  //     $('#gameList').append(`<li class="list-group-item"> ${value} </li>`)
 
-    });
+  //   });
   
-  });
+  // });
 
-  $('#btnClearGames').on('click', function() {
+  // $('#btnClearGames').on('click', function() {
 
-    $('#gameList').slideToggle(1000).empty();
+  //   $('#gameList').slideToggle(1000).empty();
 
-  });
+  // });
 });
 
 function loadGameData(appendId) {
@@ -44,10 +44,6 @@ function loadGameData(appendId) {
       ${game.name}
 
       <ul class"list-group gameDetails">
-        <li class="input-group w-100">
-          <span class="w-20 input-group-text">title</span>
-            <input id="gameNo${index}TitleEdit" name="title type="text" class="form-control editGame" value="${song.title}">
-        </li>
         <li class="input-group w-100">
           <span class="w-20 input-group-text">developer</span>
             <input id="gameNo${index}DeveloperEdit" name="developer type="text" class="form-control editGame" value="${song.developer}">
@@ -100,7 +96,7 @@ function addEvents(){
   $('#btnSaveSong').on('click', ()=> {
 
     data.games.push({
-      title : $('#gameAddTitle').val(),
+      name : $('#gameAddName').val(),
       developer : $('#gameAddDeveloper').val(),
       singleplayer : $('#gameAddSingleplayer').val(),
       multiplayer : $('#gameAddMultiplayer').val(),
@@ -135,11 +131,3 @@ function addEvents(){
     console.log(data.games); 
   });
 }
-
-// let gameList = [
-//   "Call of Duty: Modern Warfare",
-//   "Batman: Arkham Knight", 
-//   "Red Dead Redemption 2",
-//   "Minecraft",
-//   "Runescape"
-// ]

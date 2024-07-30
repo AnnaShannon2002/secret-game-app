@@ -2,42 +2,42 @@ data = {
 
     games : [
       {
-          title : "Mortal Kombat 11",
+          name : "Mortal Kombat 11",
           developer : "NetherRealm Studios",
           singleplayer : "yes",
           multiplayer : "yes",
           tags : ["fighting", "action", "violent"]
       },
       {
-          title : "Call of Duty: Modern Warfare",
+          name : "Call of Duty: Modern Warfare",
           developer : "Infinity Ward",
           singleplayer : "yes",
           multiplayer : "yes",
           tags : ["shooter", "action", "violent"]
       },
       {
-          title : "Batman: Arkham Knight",
+          name : "Batman: Arkham Knight",
           developer : "Rocksteady Studios",
           singleplayer : "yes",
           multiplayer : "no",
           tags : ["action", "adventure", "violent"]
       },
       {
-          title : "Red Dead Redemption 2",
+          name : "Red Dead Redemption 2",
           developer : "Rockstar Games",
           singleplayer : "yes",
           multiplayer : "yes",
           tags : ["action", "adventure", "violent"]
       },
       {
-          title : "Minecraft",
+          name : "Minecraft",
           developer : "Mojang Studios",
           singleplayer : "yes",
           multiplayer : "yes",
           tags : ["sandbox", "adventure", "creative"]
       },
       {
-          title : "Runescape",
+          name : "Runescape",
           developer : "Jagex",
           singleplayer : "no",
           multiplayer : "yes",
