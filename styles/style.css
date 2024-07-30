@@ -40,3 +40,10 @@ li {
     font-style: normal;
     background-color: #FFFFFF;
 }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
